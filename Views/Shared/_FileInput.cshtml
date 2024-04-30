@@ -1,0 +1,18 @@
+﻿<!-- Add FileInput CSS -->
+<link rel="stylesheet" type="text/css" href="~/assets/FileInput/fileinput.css" media="all" />
+<link rel="stylesheet" type="text/css" href="~/assets/FileInput/all.css">
+<script src="~/assets/FileInput/fileinput.js" type="text/javascript"></script>
+<script src="~/assets/FileInput/theme.js" type="text/javascript"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#ImageFile").fileinput({
+            'showUpload': false,
+            theme: 'fas',
+            minFileSize: 1,
+            maxFileSize: 200,
+            browseLabel: 'Profile Image',
+            mainClass: 'fileInputmain',
+            dropZoneEnabled: false
+        });
+    });
+</script>

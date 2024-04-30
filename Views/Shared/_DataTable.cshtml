@@ -1,0 +1,27 @@
+﻿ <!-- Add Datatable CSS & JS -->
+<link rel="stylesheet" type="text/css" href="~/assets/dataTable/jquery.dataTables.min.css" />
+<link rel="stylesheet" type="text/css" href="~/assets/dataTable/buttons.dataTables.min.css" />
+<script type="text/javascript" charset="utf8" src="~/assets/dataTable/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="~/assets/dataTable/dataTables.buttons.min.js"></script>
+<script type="text/javascript" charset="utf8" src="~/assets/dataTable/buttons.flash.min.js"></script>
+<script type="text/javascript" charset="utf8" src="~/assets/dataTable/pdfmake.min.js"></script>
+<script type="text/javascript" charset="utf8" src="~/assets/dataTable/vfs_fonts.js"></script>
+<script type="text/javascript" charset="utf8" src="~/assets/dataTable/buttons.html5.min.js"></script>
+<script type="text/javascript" charset="utf8" src="~/assets/dataTable/buttons.print.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".dynamic-table").prepend($("<thead></thead>").append($(this).find("tr:first"))).dataTable({
+            dom: 'Bfrtlip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ],
+
+            "fnRowCallback": function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+                //debugger;
+                var index = iDisplayIndexFull + 1;
+                $("td:first", nRow).html(index);
+                return nRow;
+            }
+        });
+    });
+</script>
