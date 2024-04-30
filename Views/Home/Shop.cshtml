@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Shop";
+}
+@model IEnumerable<Shop>
+
+<partial name="_BreadcrumbPartial" model='@new Breadcrumb("Shop", "fa-basket-shopping")' />
+<partial name="_Notification" />
+
+@if (Model != null)
+{
+    <section class="section-b-space shop-section">
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row g-sm-4 g-3 row-cols-xxl-5 row-cols-xl-3 row-cols-lg-2 row-cols-md-3 row-cols-2 product-list-section">
+                        @foreach(Shop shop in Model)
+                        {
+                            <div>
+                                <div class="product-box-3 h-100 wow fadeInUp">
+                                    <div class="product-header">
+                                        <div class="product-image">
+                                            <a asp-action="ProductDetails" asp-route-id="@shop.FoodId">
+                                                <img src='@Url.Content($"~/FoodImage/{shop.FoodId}.jpg")?refreshTime=@DateTime.Now.Ticks'
+                                                     class="img-fluid blur-up lazyload" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="product-footer">
+                                        <div class="product-detail">
+                                            <span class="span-name">@shop.CatName</span>
+                                            <a asp-action="ProductDetails" asp-route-id="@shop.FoodId">
+                                                <h5 class="name">@shop.FoodName?.CapitalizeEachWord()</h5>
+                                            </a>
+                                            <p class="text-content mt-1 mb-2 product-content">
+                                                @shop.FoodDescription?.CapitalizeEachWord()
+                                            </p>
+                                            <h5 class="price">
+                                                <span class="theme-color">&pound; @shop.Price</span>
+                                            </h5>
+                                            <div class="add-to-cart-box bg-success">
+                                                <a asp-action="ProductDetails" asp-route-id="@shop.FoodId"
+                                                   class="btn btn-add-cart addcart-button text-white">
+                                                    Add
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            ;
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

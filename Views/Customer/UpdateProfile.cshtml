@@ -1,0 +1,96 @@
+﻿@{
+    ViewData["Title"] = "Update Profile";
+
+}
+@model CustomerUpdate
+
+
+
+<partial name="_Notification" />
+<partial name="_BreadcrumbPartial" model='@new Breadcrumb("Update Profile", "fa-edit")' />
+<partial name="_ValidationScriptsPartial"></partial>
+@section Scripts {
+    <partial name="_FileInput" />
+    <partial name="_UpdateCustomerImage" />
+}
+<!-- Update Profile section start -->
+<section class="log-in-section section-b-space">
+    <div class="container-fluid-lg w-100">
+        <div class="row">
+            <div class="col-xxl-4 col-xl-5 col-lg-6 d-lg-block d-none ms-auto">
+                <div class="profile-box">
+                   
+                    <div class="profile-contain">
+                        <div class="profile-image">
+                            <a href="javascript:void" data-bs-toggle="modal" data-bs-target="#pictureModal" class="position-relative">
+                                <img src='@Url.Content($"~/CustomerImage/{Model.CustId}.jpg")?refreshTime=@DateTime.Now.Ticks'
+                                     class="blur-up lazyload update_img" alt="">                                
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-6 col-xl-5 col-lg-6 col-sm-8 mx-auto">
+                <div class="log-in-box">
+                    <div class="log-in-title">
+                        <h3>Welcome To FastFood</h3>
+                        <h4>Update Account</h4>
+                    </div>
+
+                    <form class="input-box" method="post">
+                        <div class="row g-4">
+                            <div class="col-12">
+                                <input asp-for="CustId" type="hidden"  class="form-control" />
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating theme-form-floating">
+                                    <input asp-for="CustName" class="form-control text-capitalize" autocomplete="off">
+                                    <label asp-for="CustName"></label>
+                                    <span asp-validation-for="CustName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating theme-form-floating">
+                                    <input asp-for="CustEmail" class="form-control text-lowercase">
+                                    <label asp-for="CustEmail"></label>
+                                    <span asp-validation-for="CustEmail" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating theme-form-floating">
+                                    <input asp-for="CustPhone" class="form-control">
+                                    <label asp-for="CustPhone"></label>
+                                    <span asp-validation-for="CustPhone" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating theme-form-floating">
+                                    <textarea asp-for="CustAddress" class="form-control " rows="4"></textarea>
+                                    <label asp-for="CustAddress"></label>
+                                    <span asp-validation-for="CustAddress" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating theme-form-floating">
+                                    <input asp-for="CustPassword" class="form-control">
+                                    <label asp-for="CustPassword"></label>
+                                    <span asp-validation-for="CustPassword" class="text-danger"></span>
+                                </div>
+                            </div>
+
+                            
+
+                            <div class="col-12">
+                                <button class="btn btn-animation w-100" type="submit">Update</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

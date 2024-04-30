@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Product Details";
+}
+@model CartList
+<partial name="_BreadcrumbPartial" model='@new Breadcrumb("Add To Cart", "fa-plus-minus")' />
+<partial name="_Notification" />
+
+@if (Model != null)
+{
+    <partial name="_ValidationScriptsPartial"></partial>
+    <section class="product-section pb-5">
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 wow fadeInUp">
+                    <div class="row g-4">
+
+                        <div class="col-xl-6 wow fadeInUp">
+                            <div class="product-left-box">
+                                <div class="row g-2">
+                                    <div class="col-xxl-10 col-lg-12 col-md-10 order-xxl-2 order-lg-1 order-md-2">
+                                        <div class="product-main-2 no-arrow">
+                                            <div>
+                                                <img src='@Url.Content($"~/FoodImage/{Model.FoodId}.jpg")?refreshTime=@DateTime.Now.Ticks'
+                                                class="img-fluid image_zoom_cls-0 blur-up lazyload" alt="">
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="right-box-contain">
+                                <br /><br /><br />
+                                <h2  class="name">@Model.FoodName.CapitalizeEachWord()</h2>
+                                <div class="price-rating">
+                                    <h3 class="theme-color price">
+                                        &pound;<strong>@Model.Price</strong>
+                                    </h3>
+                                </div>
+
+                                <div class="procuct-contain">
+                                    <p id="description">@Model.FoodDescription?.CapitalizeEachWord()</p>
+                                   
+                                </div>
+                                <div class="note-box product-packege">
+                                     <form  asp-action="AddToCart" asp-controller="Customer" asp-route-id="@Model.FoodId" method="post">
+                                        
+                                        <input asp-for="FoodId" type="hidden"/>
+                                        <input asp-for="Price" type="hidden" />
+                                    <div class="cart_qty qty-box product-qty">
+                                            <input asp-for="Quantity"  class="form-control">
+
+                                            <span asp-validation-for="Quantity" class="text-danger"></span>
+                                    </div>
+
+                                    <button type="submit"  class="btn btn-md bg-dark cart-button text-white w-100">
+                                        Add To Cart
+                                    </button>
+                                    </form>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+}

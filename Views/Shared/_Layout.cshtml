@@ -1,49 +1,605 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>   
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - FastFood</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/FastFood.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - ViewComponentApp</title>
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FastFood Fast Delivery, Msc Web Development Project">
+    <meta name="keywords" content="FastFood Fast Delivery">
+    <meta name="author" content="Clement Omolayo 22204285">
+    <link rel="icon" href="~/assets/images/favicon.png" type="image/x-icon">
+    <title>Fast Food-Fast Delivery</title>
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+          rel="stylesheet">
+
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/vendors/bootstrap.css">
+
+    <!-- wow css -->
+    <link rel="stylesheet" href="~/assets/css/animate.min.css" />
+
+    <!-- font-awesome css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/vendors/font-awesome.css">
+
+    <!-- feather icon css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/vendors/feather-icon.css">
+
+    <!-- slick css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/vendors/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/vendors/slick/slick-theme.css">
+
+    <!-- Iconly css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/bulk-style.css">
+    <link rel="stylesheet" type="text/css" href="~/assets/css/vendors/animate.css">
+
+    <!-- Template css -->
+    <link rel="stylesheet" type="text/css" href="~/assets/css/style.css">
+
+    <!-- Pre-Loader -->
+    <script type="text/javascript" src="~/assets/preloader/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="~/assets/preloader/pre.css">
+    <script type="text/javascript" src="~/assets/preloader/pre.js"></script>
+
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FastFood</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+
+
+<body class="bg-effect">
+    
+    <div class="loading">
+         <img src="~/assets/preloader/loader2.gif" width="280" height="200" alt="" />
+    </div>
+
+    <!-- Loader Start -->
+    <div class="fullpage-loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Loader End -->
+    <!-- Header Start -->
+    <header class="pb-md-4 pb-0">
+        <div class="header-top">
+            <div class="container-fluid-lg">
+                <div class="row">
+                    <div class="col-xxl-3 d-xxl-block d-none">
+                        <div class="top-left-header">
+                            <i class="iconly-Location icli text-white"></i>
+                            <span class="text-white">109 The Avenue, Acocks Green, Birmingham</span>
+                        </div>
+                    </div>
+
+                    <div class="col-xxl-9 col-lg-12 d-lg-block d-none">
+                        <div class="header-offer">
+                            <div class="notification-slider">
+                                <div>
+                                    <div class="timer-notification">
+                                        <h6>
+                                            <strong class="me-1">Welcome to FastFood!</strong>Great Dish @@ Great Price.<strong class="ms-1">
+                                                
+                                            </strong>
+
+                                        </h6>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <div class="timer-notification">
+                                        <h6>
+                                            Tasty Bites Healthy Food is now on sale!
+                                            <a asp-action="Shop" asp-controller="Home" class="text-white">
+                                                Shop Now
+                                                !
+                                            </a>
+                                        </h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="top-nav top-header sticky-header">
+            <div class="container-fluid-lg">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="navbar-top">
+                            <button class="navbar-toggler d-xl-none d-inline navbar-menu-button" type="button"
+                                    data-bs-toggle="offcanvas" data-bs-target="#primaryMenu">
+                                <span class="navbar-toggler-icon">
+                                    <i class="fa-solid fa-bars"></i>
+                                </span>
+                            </button>
+                            <a  asp-action="Index" asp-controller="Home" class="web-logo nav-logo">
+                                <img src="~/assets/images/logo/1.png" class="img-fluid blur-up lazyload" alt="">
+                            </a>
+
+                            <div class="middle-box">                               
+
+                                <div class="search-box">
+                                    <form asp-action="Shop" asp-controller="Home" method="get" style="all:unset;">
+                                        <div class="input-group">
+                                            <input name="search" type="search" class="form-control text-capitalize" placeholder="I'm searching for..."
+                                                   aria-label="searchtxt" aria-describedby="searchtxt">
+                                            <button class="btn" type="submit">
+                                                <i data-feather="search"></i>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="rightside-box">
+                                <div class="search-full">
+                                    <div class="input-group">
+                                        <span class="input-group-text">
+                                            <i data-feather="search" class="font-light"></i>
+                                        </span>
+                                        <input type="text" class="form-control search-type" placeholder="Search here..">
+                                        <span class="input-group-text close-search">
+                                            <i data-feather="x" class="font-light"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <ul class="right-side-menu">
+                                    <li class="right-side">
+                                        <div class="delivery-login-box">
+                                            <div class="delivery-icon">
+                                                <div class="search-box">
+                                                    <i data-feather="search"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="right-side">
+                                        <a asp-action="Index" asp-controller="Home" class="btn p-0 position-relative header-wishlist">
+                                            <i data-feather="home"></i>
+                                        </a>
+                                    </li>
+                                    <li class="right-side">
+                                        <a asp-action="ContactUs" asp-controller="Home" class="delivery-login-box">
+                                            <div class="delivery-icon">
+                                                <i data-feather="phone"></i>
+                                            </div>
+
+                                        </a>
+                                    </li>
+
+                                    <li class="right-side">
+                                        <div class="onhover-dropdown header-badge">
+                                            @(await Component.InvokeAsync("Cart"))
+                                        </div>
+                                    </li>
+                                    <li class="right-side onhover-dropdown">
+                                        <div class="delivery-login-box">
+                                            <div class="delivery-icon">
+                                                <i data-feather="user"></i>
+                                            </div>
+                                            <div class="delivery-detail">
+                                                <h6>Hello,</h6>
+                                                <h5>My Account</h5>
+                                            </div>
+                                        </div>
+
+                                        <div style="width:200px!important;" class="onhover-div onhover-div-login">
+                                            @(await Component.InvokeAsync("Profile"))
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="header-nav">
+                        <div class="header-nav-left">
+                            <button class="dropdown-category">
+                                <i data-feather="align-left"></i>
+                                <span>All Categories</span>
+                            </button>
+
+                            <div class="category-dropdown">
+                                <div class="category-title">
+                                    <h5>Categories</h5>
+                                    <button type="button" class="btn p-0 close-button text-content">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                </div>
+                                @(await Component.InvokeAsync("Category"))                              
+                                
+                            </div>
+                        </div>
+
+                        <div class="header-nav-middle">
+                            <div class="main-nav navbar navbar-expand-xl navbar-light navbar-sticky">
+                                <div class="offcanvas offcanvas-collapse order-xl-2" id="primaryMenu">
+                                    <div class="offcanvas-header navbar-shadow">
+                                        <h5>Menu</h5>
+                                        <button class="btn-close lead" type="button" data-bs-dismiss="offcanvas"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="offcanvas-body">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item">
+                                                <a asp-action="Index" asp-controller="Home" class="nav-link nav-link-2">Home</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link nav-link-2" asp-action="Shop" asp-controller="Home">Shop</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link nav-link-2" asp-action="About" asp-controller="Home">About Us</a>
+                                            </li>
+                                            <li class="nav-item dropdown">
+                                                <a class="nav-link nav-link-2" asp-action="ContactUs" asp-controller="Home">Contact Us</a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header-nav-right">
+                            <a class="btn btn-animation  justify-content-center " asp-action="SignUp" asp-controller="Account">
+                                Sign Up 
+                                <i class="fa fa-user-plus"></i>                               
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header End -->
+    <!-- mobile fix menu start -->
+    <div class="mobile-menu d-md-none d-block mobile-cart">
+        <ul>
+            <li class="active">
+                <a asp-action="Index" asp-controller="Home">
+                    <i class="iconly-Home icli"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+
+            <li class="mobile-category">
+                <a asp-action="Shop" asp-controller="Home">
+                    <i class="iconly-Buy icli "></i>
+                    <span>Shop</span>
+                </a>
+            </li>
+
+            <li>
+                <a asp-action="About" asp-controller="Home" class="search-box">
+                    <i class="iconly-Discovery icli"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+
+            <li>
+                <a asp-action="ContactUs" asp-controller="Home" class="notifi-wishlist">
+                    <i class="iconly-Call icli"></i>
+                    <span>Contact Us</span>
+                </a>
+            </li>
+
+            <li>
+                <a asp-controller="Customer" asp-action="ViewCart">
+                    <i class="iconly-Bag-2 icli fly-cate"></i>
+                    <span>Cart</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- mobile fix menu end -->
+
+    <!-- Body Begin -->
+    @RenderBody()
+    <!-- Body End -->
+
+
+    <!-- Footer Section Start -->
+    <footer class="section-t-space">
+        <div class="container-fluid-lg">
+            <div class="service-section">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="service-contain">
+                            <div class="service-box">
+                                <div class="service-image">
+                                    <img src="~/assets/svg/product.svg" class="blur-up lazyload" alt="">
+                                </div>
+
+                                <div class="service-detail">
+                                    <h5>Every Fresh Products</h5>
+                                </div>
+                            </div>
+
+                            <div class="service-box">
+                                <div class="service-image">
+                                    <img src="~/assets/svg/delivery.svg" class="blur-up lazyload" alt="">
+                                </div>
+
+                                <div class="service-detail">
+                                    <h5>Free Delivery For Order Over &pound;50</h5>
+                                </div>
+                            </div>
+
+                            <div class="service-box">
+                                <div class="service-image">
+                                    <img src="~/assets/svg/discount.svg" class="blur-up lazyload" alt="">
+                                </div>
+
+                                <div class="service-detail">
+                                    <h5>Daily Mega Discounts</h5>
+                                </div>
+                            </div>
+
+                            <div class="service-box">
+                                <div class="service-image">
+                                    <img src="~/assets/svg/market.svg" class="blur-up lazyload" alt="">
+                                </div>
+
+                                <div class="service-detail">
+                                    <h5>Best Price On The Market</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="main-footer section-b-space section-t-space">
+                <div class="row g-md-4 g-3">
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="footer-logo">
+                            <div class="theme-logo">
+                                <a asp-action="Index" asp-controller="Home">
+                                    <img src="~/assets/images/logo/1.png" class="blur-up lazyload" alt="">
+                                </a>
+                            </div>
+
+                            <div class="footer-logo-contain">
+                                <p>
+                                    We are a friendly bar serving a variety of cocktails, wines and beers. Our bar is a
+                                    perfect place for a couple.
+                                </p>
+
+                                <ul class="address">
+                                    <li>
+                                        <i data-feather="home"></i>
+                                        <a href="javascript:void(0)">109 The Avenue, Acocks Green, Birmingham</a>
+                                    </li>
+                                    <li>
+                                        <i data-feather="mail"></i>
+                                        <a href="javascript:void(0)">support@fastfood.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                        <div class="footer-title">
+                            <h4>My Account</h4>
+                        </div>
+
+                        <div class="footer-contain">
+                            <ul>
+                                <li>
+                                    <a asp-controller="Customer" asp-action="UpdateProfile" class="text-content">Update Profile</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Customer" asp-action="UpdateProfile" class="text-content">Change Password</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Account" asp-action="LogOut" class="text-content">Log Out</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl col-lg-2 col-sm-3">
+                        <div class="footer-title">
+                            <h4>Useful Links</h4>
+                        </div>
+
+                        <div class="footer-contain">
+                            <ul>
+                                <li>
+                                    <a asp-action="Index" asp-controller="Home" class="text-content">Home</a>
+                                </li>
+                                <li>
+                                    <a asp-action="Shop" asp-controller="Home" class="text-content">Shop</a>
+                                </li>
+                                <li>
+                                    <a asp-action="About" asp-controller="Home" class="text-content">About Us</a>
+                                </li>
+                                
+                                <li>
+                                    <a asp-action="ContactUs" asp-controller="Home" class="text-content">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-2 col-sm-3">
+                        <div class="footer-title">
+                            <h4>Help Center</h4>
+                        </div>
+
+                        <div class="footer-contain">
+                            <ul>
+                                <li>
+                                    <a asp-controller="Customer" asp-action="MyAccount" class="text-content">Your Account</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Customer" asp-action="ViewCart" class="text-content">View Cart</a>
+                                </li>
+                                <li>
+                                    <a asp-controller="Customer" asp-action="CheckOut" class="text-content">Checkout</a>
+                                </li>
+                                <li>
+                                    <a asp-action="Shop" asp-controller="Home" class="text-content">Shop</a>
+                                </li>
+                               
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-4 col-sm-6">
+                        <div class="footer-title">
+                            <h4>Contact Us</h4>
+                        </div>
+
+                        <div class="footer-contact">
+                            <ul>
+                                <li>
+                                    <div class="footer-number">
+                                        <i data-feather="phone"></i>
+                                        <div class="contact-number">
+                                            <h6 class="text-content">Hotline 24/7 :</h6>
+                                            <h5>+447947877686</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="footer-number">
+                                        <i data-feather="mail"></i>
+                                        <div class="contact-number">
+                                            <h6 class="text-content">Email Address :</h6>
+                                            <h5>info@comng.net</h5>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sub-footer section-small-space">
+                <div class="reserve">
+                    <h6 class="text-content">©2023 <a href="https://technoclem.comng.net/" target="_blank">Clement Omolayo</a> All rights reserved</h6>
+                </div>
+
+                <div class="payment">
+                    <img src="~/assets/images/payment/1.png" class="blur-up lazyload" alt="">
+                </div>
+
+                <div class="social-link">
+                    <h6 class="text-content">Stay connected :</h6>
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/omolayo.clement.10" target="_blank">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        <li>
+                            <a href="https://twitter.com/technoclem_net" target="_blank">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://in.pinterest.com/" target="_blank">
+                                <i class="fa-brands fa-pinterest-p"></i>
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - FastFood - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+    <!-- Footer Section End -->
+   
+    <!-- Tap to top start -->
+    <div class="theme-option">
+
+        <div class="back-to-top">
+            <a id="back-to-top" href="#">
+                <i class="fas fa-chevron-up"></i>
+            </a>
+        </div>
+    </div>
+    <!-- Tap to top end -->
+    <!-- Bg overlay Start -->
+    <div class="bg-overlay"></div>
+    <!-- Bg overlay End -->
+    <!-- latest jquery-->
+    <script src="~/assets/js/jquery-3.6.0.min.js"></script>
+
+    <!-- jquery ui-->
+    <script src="~/assets/js/jquery-ui.min.js"></script>
+
+    <!-- Bootstrap js-->
+    <script src="~/assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/bootstrap/bootstrap-notify.min.js"></script>
+    <script src="~/assets/js/bootstrap/popper.min.js"></script>
+
+    <!-- feather icon js-->
+    <script src="~/assets/js/feather/feather.min.js"></script>
+    <script src="~/assets/js/feather/feather-icon.js"></script>
+
+    <!-- Lazyload Js -->
+    <script src="~/assets/js/lazysizes.min.js"></script>
+
+    <!-- Slick js-->
+    <script src="~/assets/js/slick/slick.js"></script>
+    <script src="~/assets/js/slick/slick-animation.min.js"></script>
+    <script src="~/assets/js/slick/custom_slick.js"></script>
+
+    <!-- Auto Height Js -->
+    <script src="~/assets/js/auto-height.js"></script>
+
+    <!-- Timer Js -->
+    <script src="~/assets/js/timer1.js"></script>
+
+    <!-- Fly Cart Js -->
+    <script src="~/assets/js/fly-cart.js"></script>
+
+    <!-- Quantity js -->
+    <script src="~/assets/js/quantity-2.js"></script>
+
+    <!-- WOW js -->
+    <script src="~/assets/js/wow.min.js"></script>
+    <script src="~/assets/js/custom-wow.js"></script>
+
+    <!-- script js -->
+    <script src="~/assets/js/script.js"></script>
+    
+    @RenderSection("Scripts", required: false)
 </body>
+
+
 </html>

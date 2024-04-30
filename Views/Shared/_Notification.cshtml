@@ -1,0 +1,23 @@
+﻿ 
+
+<link rel="stylesheet" href="~/lib/alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="~/lib/alertifyjs/css/themes/bootstrap.css">
+<script src="~/lib/alertifyjs/alertify.js"></script>
+
+@if (TempData["success"] != null)
+{   
+      <script type="text/javascript">
+        alertify.defaults.transition = "slide";
+        alertify.alert('@TempData["success"]');
+        alertify.success('@TempData["success"]');
+    </script>
+   
+}
+else if (TempData["error"] != null)
+{
+    <script type="text/javascript">
+        alertify.defaults.transition = "slide";
+        alertify.alert('@TempData["error"]');
+        alertify.error('@TempData["error"]');
+    </script>
+}

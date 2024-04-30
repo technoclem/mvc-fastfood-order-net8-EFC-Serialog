@@ -1,0 +1,106 @@
+﻿@{
+    ViewData["Title"] = "My Cart";
+}
+@model IEnumerable<CartList>
+<partial name="_BreadcrumbPartial" model='@new Breadcrumb("My Cart", "fa-shopping-cart")' />
+<partial name="_Notification" />
+
+@if ((Model != null)&&(Model.Count()>0))
+{
+    int k = 1;
+    float totalPrice = 0;
+    @section Scripts {
+    <partial name="_DataTable"></partial>
+    }
+
+    <section class="cart-section section-b-space">
+        <div class="container-fluid-lg">
+            <div class="row g-sm-5 g-3">
+                <div class="col-xxl-9">
+                    <div class="cart-table">
+                        <div class="table-responsive-xl">
+                            <div style="margin: 0 auto; overflow: scroll;">
+                                <table class="dynamic-table table table-striped table-bordered table-hover w-100">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center align-middle">SN</th>
+                                            <th class="text-center align-middle">Item</th>
+                                            <th class="text-left align-middle">Food Item Name</th>
+                                            <th class="text-center align-middle">Price £</th>
+                                            <th class="text-center align-middle">Quantity</th>
+                                            <th class="text-center align-middle">Total Price £</th>
+                                            <th class="text-center align-middle">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                         
+                                        @foreach (var cart in Model)
+                                        {
+                                            totalPrice += (cart.Price * cart.Quantity);
+                                            <tr>
+                                            <td class="text-center align-middle">@k.ToString()</td>
+                                            <td class="text-center align-middle">
+                                                <div class="table-image">
+                                                        <img width="50" height="50" src='@Url.Content($"~/FoodImage/{cart.FoodId}.jpg")' class="img-fluid" alt="">
+                                                </div>
+                                            </td>
+                                            <td class="text-left align-middle">@cart.FoodName</td>
+                                                <td class="text-center align-middle">@cart.Price.ToString("C")</td>
+                                                <td class="text-center align-middle">@cart.Quantity</td>
+                                            <td class="text-center align-middle">@(cart.Price*cart.Quantity)</td>
+                                            <td class="text-center align-middle">
+                                                <form asp-action="RemoveCart" method="post">
+                                                <input type="hidden" name="id" value="@cart.FoodId" />                                               
+                                                <button type="submit" id="btnDelete" class="btn btn-danger btn-block w-75">
+                                                    Remove
+                                                </button>
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div  class="col-xxl-3">
+                    <div class="summery-box p-sticky">
+                        <div class="summery-header">
+                            <h3>Cart Total</h3>
+                        </div>
+
+
+
+                        <ul class="summery-total">
+                            <li class="list-total border-top-0">
+                                <h4>Total (&pound;)</h4>
+                                <h4 class="price theme-color"><strong>@totalPrice.ToString("C")</strong></h4>
+                            </li>
+                        </ul>
+
+                        <div class="button-group cart-button">
+                            <ul>
+                                <li>
+                                    <a asp-action="CheckOut" asp-controller="Customer"
+                                       class="btn btn-animation proceed-btn fw-bold">
+                                        Proceed To Checkout
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a asp-action="Shop" asp-controller="Home"
+                                       class="btn btn-light shopping-button text-dark">
+                                        <i class="fa-solid fa-arrow-left-long"></i>Return To Shopping
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+}

@@ -1,0 +1,18 @@
+﻿@model IEnumerable<CategoryList>
+
+@if ((Model!=null)&&(Model.Count() > 0))
+{
+    <ul class='category-list'>
+        @foreach (var ct in Model)
+        {
+            <li class='onhover-category-list'>
+                <a asp-controller="Home" asp-action="Shop"
+                   asp-route-SearchString="@ct.CatName" class='category-name'>
+                    <img src='@Url.Content($"~/CategoryImage/{ct.CatId}.jpg")'
+                         alt='@ct.CatName'>
+                    <h6>@ct.CatName</h6>
+                </a>
+            </li>
+        }
+    </ul>
+}
