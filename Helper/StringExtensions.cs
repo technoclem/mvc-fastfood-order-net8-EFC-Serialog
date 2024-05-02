@@ -1,4 +1,4 @@
-﻿namespace FastFood.Helper
+﻿namespace FastFoodEFC.Helper
 {
     using System.Globalization;
     public static class StringExtensions

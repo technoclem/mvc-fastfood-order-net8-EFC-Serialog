@@ -1,13 +1,13 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace FastFood.Models
+namespace FastFoodEFC.Models
 {
     public class FoodItem
     {
         [Key]
-        [DisplayName("Food ID")]
-        public int FoodID { get; set; }
+        [DisplayName("Food Id")]
+        public int FoodId { get; set; }
 
         [Required(ErrorMessage ="Food Name Required")]
         [DisplayName("Food Name")]
@@ -22,7 +22,7 @@ namespace FastFood.Models
 
         [Required(ErrorMessage = "Food Price Required")]
         [DisplayName("Food Price")]        
-        public required float FoodPrice { get; set; }
+        public double Price { get; set; }
 
        
         [Required(ErrorMessage = "Stock date required")]
@@ -31,6 +31,12 @@ namespace FastFood.Models
         public string? DateAdded { get; set; }
 
         [DisplayName("Category ID")]
-        public int CatID { get; set; }
+        public int CatId { get; set; }
+
+        public Category? Category { get; set; }
+
+        public List<Cart>? Carts { get; set; }
+        public List<Order>? Orders { get; set; }
+
     }
 }

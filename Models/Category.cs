@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace FastFood.Models
+namespace FastFoodEFC.Models
 {
     public class Category
     {
         [Key]
-        public int CartId { get; set; }
+        public int CatId { get; set; }
 
         [Required]
         [MaxLength(100)]
@@ -17,5 +17,8 @@ namespace FastFood.Models
         [MaxLength(100)]
         [DisplayName("Category Date")]
         public required string CatDate { get; set; }
+
+        public List<FoodItem>? FoodItems { get; set; }
+
     }
 }

@@ -2,10 +2,8 @@
 
 using System.Net.Mail;
 using System.Net;
-using System.Text.RegularExpressions;
 using FastFood.Service.Interface;
-using Microsoft.Extensions.Configuration;
-using Azure;
+
 
 namespace FastFood.Service
 {

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace FastFood.Dto
+namespace FastFoodEFC.Dto
 {
 
    
@@ -10,7 +10,7 @@ namespace FastFood.Dto
         public required int FoodId { get; set; }
 
         public required string FoodName { get; set; }
-        public required float Price { get; set; }
+        public required double Price { get; set; }
 
     }
 }

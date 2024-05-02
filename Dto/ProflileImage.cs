@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace FastFood.Dto
+namespace FastFoodEFC.Dto
 {
     public class ProflileImage
     {

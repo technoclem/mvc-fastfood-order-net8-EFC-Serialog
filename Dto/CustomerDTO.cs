@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
 
-namespace FastFood.Dto
+namespace FastFoodEFC.Dto
 {
 
 
@@ -19,13 +19,13 @@ namespace FastFood.Dto
 
         public string? CustPassword { get; set; }
 
-        public float Ewallet { get; set; }
+        public double Ewallet { get; set; }
 
-        public IEnumerable<Order>? CustOrder { get; set;}
+        public IEnumerable<CustOrder>? CustOrder { get; set;}
 
     }
 
-    public class Order
+    public class CustOrder
     {
         public string? OrderDate { get; set; }
 
@@ -33,7 +33,7 @@ namespace FastFood.Dto
 
         public string? FoodName { get; set; }
 
-        public float FoodPrice { get; set; }
+        public double FoodPrice { get; set; }
 
         public int Quantity { get; set; }
 

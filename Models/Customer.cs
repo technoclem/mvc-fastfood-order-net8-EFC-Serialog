@@ -1,44 +1,44 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace FastFood.Models
+namespace FastFoodEFC.Models
 {
     public class Customer
     {
         [Key]
-        public int CustID { get; set; }
+        public int CustId { get; set; }
 
         [Required(ErrorMessage ="Full Name Required")]
         [DisplayName("Full Name")]
         [MaxLength(100)]
-        public required string CustName { get; set; }
+        public  string? CustName { get; set; }
 
 
         [Required(ErrorMessage = "Customer Address Required")]
         [DisplayName("Customer Address")]
         [MaxLength(100)]
-        public required string CustAddress { get; set; }
+        public  string? CustAddress { get; set; }
 
         [Required(ErrorMessage = "Customer Phone Number Required")]
         [DisplayName("Customer Phone")]
         [MaxLength(30)]
-        public required string CustPhone { get; set; }
+        public string? CustPhone { get; set; }
 
 
         [Required(ErrorMessage = "Email Address Required")]
         [DisplayName("Email Address")]
         [MaxLength(100)]
-        public required string EmailAddress { get; set; }
+        public string? CustEmail { get; set; }
 
         [Required(ErrorMessage = "Password Required")]
         [DisplayName("Password")]
         [MaxLength(20)]
-        public required string CustPassword { get; set; }
+        public string? CustPassword { get; set; }
 
         [Required(ErrorMessage = "Registration date required")]
         [DisplayName("Registration date")]
         [MaxLength(20)]
-        public required string RegDate { get; set; }
+        public string? RegDate { get; set; }
 
         
         [DisplayName("Activated Pin")]
@@ -50,7 +50,10 @@ namespace FastFood.Models
         public int Activated { get; set; } = 0;
 
         [DisplayName("Ewallet")]
-        [MaxLength(15)]
-        public float Ewallet { get; set; } = 2000f;
+        public double EWallet { get; set; } = 2000f;
+
+        public List<Cart>? Carts { get; set; }
+        public List<Order>? Orders { get; set; }
+
     }
 }

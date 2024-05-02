@@ -1,9 +1,8 @@
 using FastFood.Service;
 using FastFood.Service.Interface;
-using Microsoft.Extensions.Configuration;
+using FastFoodEFC.Data;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
-using System.Runtime.Serialization;
-using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,9 +10,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseSerilog((context, configuration) => configuration.ReadFrom.Configuration(context.Configuration));
 
 // Add Cookie Authentication 
-
-
-
 string? cookieAuth = builder.Configuration["CookieAuth:Name"];
 if (cookieAuth != null)
 {
@@ -31,7 +27,11 @@ if (cookieAuth != null)
 }
 
 
-
+//Add Entity framework core services
+builder.Services.AddDbContext<FastFoodDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

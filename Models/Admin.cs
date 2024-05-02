@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace FastFood.Models
+namespace FastFoodEFC.Models
 {
     public class Admin
     {
@@ -27,5 +27,7 @@ namespace FastFood.Models
         [DisplayName("Registration date")]
         [MaxLength(20)]
         public required string RegDate { get; set; }
+
+        public List<Role>? Roles { get; set; }
     }
 }

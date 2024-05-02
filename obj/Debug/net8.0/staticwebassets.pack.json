@@ -1,0 +1,1029 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\FastFoodEFC.bundle.scp.css",
+      "PackagePath": "staticwebassets\\FastFoodEFC.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\AdminPics\\3.jpg",
+      "PackagePath": "staticwebassets\\AdminPics\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\AdminPics\\default.gif",
+      "PackagePath": "staticwebassets\\AdminPics\\default.gif"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\1.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\10.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\2.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\3.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\4.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\5.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\6.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\7.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\8.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\9.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CategoryImage\\default.jpg",
+      "PackagePath": "staticwebassets\\CategoryImage\\default.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\1.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\10.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\2.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\3.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\4.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\5.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\6.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\7.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\8.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\CustomerImage\\9.jpg",
+      "PackagePath": "staticwebassets\\CustomerImage\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\FoodImage\\1.jpg",
+      "PackagePath": "staticwebassets\\FoodImage\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\FoodImage\\2.jpg",
+      "PackagePath": "staticwebassets\\FoodImage\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\FoodImage\\3.jpg",
+      "PackagePath": "staticwebassets\\FoodImage\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\FoodImage\\4.jpg",
+      "PackagePath": "staticwebassets\\FoodImage\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\FoodImage\\5.jpg",
+      "PackagePath": "staticwebassets\\FoodImage\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\FoodImage\\6.jpg",
+      "PackagePath": "staticwebassets\\FoodImage\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\FoodImage\\7.jpg",
+      "PackagePath": "staticwebassets\\FoodImage\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\FoodImage\\8.jpg",
+      "PackagePath": "staticwebassets\\FoodImage\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\FileInput\\all.css",
+      "PackagePath": "staticwebassets\\assets\\FileInput\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\FileInput\\fileinput.css",
+      "PackagePath": "staticwebassets\\assets\\FileInput\\fileinput.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\FileInput\\fileinput.js",
+      "PackagePath": "staticwebassets\\assets\\FileInput\\fileinput.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\FileInput\\fileinput.min.css",
+      "PackagePath": "staticwebassets\\assets\\FileInput\\fileinput.min.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\FileInput\\fileinput.min.js",
+      "PackagePath": "staticwebassets\\assets\\FileInput\\fileinput.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\FileInput\\theme.js",
+      "PackagePath": "staticwebassets\\assets\\FileInput\\theme.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\FileInput\\theme.min.js",
+      "PackagePath": "staticwebassets\\assets\\FileInput\\theme.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\animate.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\bstyle.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bstyle.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\bulk-style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bulk-style.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\ratio.css",
+      "PackagePath": "staticwebassets\\assets\\css\\ratio.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\remixicon.css",
+      "PackagePath": "staticwebassets\\assets\\css\\remixicon.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vector-map.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vector-map.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\animate.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\bootstrap.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\feather-icon.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\feather-icon.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\font-awesome.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\font-awesome.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\scrollbar.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\scrollbar.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\slick\\ajax-loader.gif",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\slick\\ajax-loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\slick\\slick-theme.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\slick\\slick-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\slick\\slick.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\slick\\slick.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\css\\vendors\\themify.css",
+      "PackagePath": "staticwebassets\\assets\\css\\vendors\\themify.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\buttons.dataTables.min.css",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\buttons.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\buttons.flash.min.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\buttons.flash.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\buttons.html5.min.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\buttons.html5.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\buttons.print.min.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\buttons.print.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\dataTables.buttons.min.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\dataTables.buttons.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\dataTables.fixedColumns.min.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\dataTables.fixedColumns.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\jszip.min.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\jszip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\pdfmake.min.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\pdfmake.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\dataTable\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\assets\\dataTable\\vfs_fonts.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\.keep",
+      "PackagePath": "staticwebassets\\assets\\fonts\\.keep"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\Iconly-Bold.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Iconly-Bold.eot"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\Iconly-Bold.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Iconly-Bold.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\Iconly-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Iconly-Bold.ttf"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\Iconly-Bold.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Iconly-Bold.woff"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\Iconly-light.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Iconly-light.eot"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\Iconly-light.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Iconly-light.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\Iconly-light.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Iconly-light.ttf"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\Iconly-light.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\Iconly-light.woff"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.css",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.eot",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.eot"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.glyph.json",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.glyph.json"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.less",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.less"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.module.less",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.module.less"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.scss",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.scss"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.styl",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.styl"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.symbol.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.symbol.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.woff",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.woff"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\fonts\\remixicon.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\remixicon.woff2"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\about-us1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about-us1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\about-us2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about-us2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\appstore.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\appstore.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\bg-body.png",
+      "PackagePath": "staticwebassets\\assets\\images\\bg-body.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\bg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\bg.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\10.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\11.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\6.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\7.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\8.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cake\\product\\9.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cake\\product\\9.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\contact-us.png",
+      "PackagePath": "staticwebassets\\assets\\images\\contact-us.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cookie-bar.png",
+      "PackagePath": "staticwebassets\\assets\\images\\cookie-bar.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\cover-img.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\cover-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\facebook.png",
+      "PackagePath": "staticwebassets\\assets\\images\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\assets\\images\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\forgot.png",
+      "PackagePath": "staticwebassets\\assets\\images\\forgot.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\google.png",
+      "PackagePath": "staticwebassets\\assets\\images\\google.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\log-in-bg.png",
+      "PackagePath": "staticwebassets\\assets\\images\\log-in-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\log-in.png",
+      "PackagePath": "staticwebassets\\assets\\images\\log-in.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\logo\\1-white.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\1-white.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\logo\\1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\logo\\full-white.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\full-white.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\logo\\logo-white.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\logo-white.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\logo\\logo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\newsletter.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\newsletter.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\payment\\1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\payment\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\playstore.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\playstore.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\product\\category\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\product\\category\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Chicken_Fried_Meal.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Chicken_Fried_Meal.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Chicken_Noodles.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Chicken_Noodles.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Classic_American_Steak.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Classic_American_Steak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Freshwater_Fish_Dish.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Freshwater_Fish_Dish.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Italian_Grill_Steak.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Italian_Grill_Steak.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Meat_And_Fried_Rice.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Meat_And_Fried_Rice.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Pot_Roast_vegetables.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Pot_Roast_vegetables.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Shrimp_And_Pasta.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Shrimp_And_Pasta.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\Teriyaki_Chicken_rice.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\Teriyaki_Chicken_rice.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\shop\\long_horn_fish.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\shop\\long_horn_fish.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\sign-up.png",
+      "PackagePath": "staticwebassets\\assets\\images\\sign-up.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\10.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\11.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\12.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\12.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\13.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\13.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\14.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\14.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\15.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\15.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\4.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\5.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\7.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\8.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\banner\\9.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\banner\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\blog\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\blog\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\blog\\2.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\blog\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\blog\\3.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\blog\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\footer-shape-2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\footer-shape-2.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\footer-shape.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\footer-shape.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\1.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\10.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\10.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\11.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\11.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\12.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\12.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\13.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\13.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\14.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\14.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\15.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\15.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\16.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\16.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\17.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\17.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\18.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\18.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\19.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\19.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\2.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\20.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\20.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\21.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\21.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\22.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\22.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\23.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\23.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\24.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\24.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\25.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\25.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\26.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\26.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\3.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\4.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\4.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\5.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\6.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\6.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\7.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\7.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\8.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\8.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\product\\9.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\product\\9.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\review\\1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\review\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\images\\vegetable\\shape.png",
+      "PackagePath": "staticwebassets\\assets\\images\\vegetable\\shape.png"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\alertify\\alertify.js",
+      "PackagePath": "staticwebassets\\assets\\js\\alertify\\alertify.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\alertify\\alertify.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\alertify\\alertify.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\auto-height.js",
+      "PackagePath": "staticwebassets\\assets\\js\\auto-height.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\bootstrap\\bootstrap-notify.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap\\bootstrap-notify.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\bootstrap\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\bootstrap\\popper.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap\\popper.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\bscript.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bscript.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\config.js",
+      "PackagePath": "staticwebassets\\assets\\js\\config.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\custom-slick.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom-slick.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\custom-wow.js",
+      "PackagePath": "staticwebassets\\assets\\js\\custom-wow.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\customizer.js",
+      "PackagePath": "staticwebassets\\assets\\js\\customizer.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\feather\\feather-icon.js",
+      "PackagePath": "staticwebassets\\assets\\js\\feather\\feather-icon.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\feather\\feather.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\feather\\feather.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\fly-cart.js",
+      "PackagePath": "staticwebassets\\assets\\js\\fly-cart.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\jquery-3.6.0.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-3.6.0.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\jquery-ui.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\jquery-ui.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\lazysizes.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\lazysizes.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\notify\\bootstrap-notify.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\notify\\bootstrap-notify.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\notify\\index.js",
+      "PackagePath": "staticwebassets\\assets\\js\\notify\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\quantity-2.js",
+      "PackagePath": "staticwebassets\\assets\\js\\quantity-2.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\ratio.js",
+      "PackagePath": "staticwebassets\\assets\\js\\ratio.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\script.js",
+      "PackagePath": "staticwebassets\\assets\\js\\script.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\scrollbar\\custom.js",
+      "PackagePath": "staticwebassets\\assets\\js\\scrollbar\\custom.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\scrollbar\\simplebar.js",
+      "PackagePath": "staticwebassets\\assets\\js\\scrollbar\\simplebar.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\sidebar-menu.js",
+      "PackagePath": "staticwebassets\\assets\\js\\sidebar-menu.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\sidebareffect.js",
+      "PackagePath": "staticwebassets\\assets\\js\\sidebareffect.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\slick.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\slick\\custom_slick.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick\\custom_slick.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\slick\\slick-animation.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick\\slick-animation.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\slick\\slick.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slick\\slick.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\timer1.js",
+      "PackagePath": "staticwebassets\\assets\\js\\timer1.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\tooltip-init.js",
+      "PackagePath": "staticwebassets\\assets\\js\\tooltip-init.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\mail\\fastfood_mail.txt",
+      "PackagePath": "staticwebassets\\assets\\mail\\fastfood_mail.txt"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\preloader\\jquery.min.js",
+      "PackagePath": "staticwebassets\\assets\\preloader\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\preloader\\loader.gif",
+      "PackagePath": "staticwebassets\\assets\\preloader\\loader.gif"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\preloader\\loader2.gif",
+      "PackagePath": "staticwebassets\\assets\\preloader\\loader2.gif"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\preloader\\pre.css",
+      "PackagePath": "staticwebassets\\assets\\preloader\\pre.css"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\preloader\\pre.js",
+      "PackagePath": "staticwebassets\\assets\\preloader\\pre.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\breakfast.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\breakfast.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\cup.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\cup.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\delivery.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\delivery.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\discount.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\discount.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\frozen.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\frozen.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\leaf.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\leaf.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\market.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\market.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\meats.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\meats.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\milk.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\milk.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\order.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\order.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\pet.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\pet.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\product.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\product.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\vegetable.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\vegetable.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\assets\\svg\\wishlist.svg",
+      "PackagePath": "staticwebassets\\assets\\svg\\wishlist.svg"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\omola\\source\\repos\\FastFoodEFC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.FastFoodEFC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.FastFoodEFC.props",
+      "PackagePath": "build\\FastFoodEFC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.FastFoodEFC.props",
+      "PackagePath": "buildMultiTargeting\\FastFoodEFC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.FastFoodEFC.props",
+      "PackagePath": "buildTransitive\\FastFoodEFC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

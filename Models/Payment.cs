@@ -1,33 +1,33 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace FastFood.Models
+namespace FastFoodEFC.Models
 {
     public class Payment
     {
         [Key]
         [DisplayName("Payment ID")]
-        public  int ID { get; set; }
+        public  int PaymentId { get; set; }
 
         [DisplayName("Customer ID")]
-        public required int CustID { get; set; }
+        public  int CustId { get; set; }
 
         [DisplayName("Order ID")]
-        public required int OrderID { get; set; }
+        public  int OrderId { get; set; }
 
         [DisplayName("Total Price")]
-        public required int totalPrice { get; set; }
+        public double TotalPrice { get; set; }
 
         [Required(ErrorMessage = "Payment Date")]
         [DisplayName("Payment date")]
         [MaxLength(50)]
-        public string? Pdate { get; set; }
+        public string? PDate { get; set; }
 
 
         [DisplayName("Dispatch")]
-        public int Dispatch { get; set; } = 0;      
-        
+        public int Dispatch { get; set; } = 0;
 
-       
+        public Order? Order { get; set; }
+
     }
 }

@@ -1,15 +1,9 @@
-﻿using Azure;
-using Dapper;
-using FastFood.Controllers;
-using FastFood.Dto;
-using FastFood.Models;
-using FastFood.Service.Interface;
+﻿using FastFood.Service.Interface;
+using FastFoodEFC.Data;
+using FastFoodEFC.Dto;
+using FastFoodEFC.Models;
 using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Data.SqlClient;
-using Serilog;
-using System.Data;
-using System.Reflection;
+using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
 
 namespace FastFood.Service
@@ -22,11 +16,13 @@ namespace FastFood.Service
         private IEmailService _emailService;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IAESService _AESService;
+        private readonly FastFoodDbContext _context;
 
-        public CustomerService(ILogger<CustomerService> logger, IWebHostEnvironment environment,
+        public CustomerService(FastFoodDbContext dbContext,ILogger<CustomerService> logger, IWebHostEnvironment environment,
             IConfiguration config, IEmailService emailService, IHttpContextAccessor httpContextAccessor,
             IAESService AESService)
         {
+            _context = dbContext;
             _environment = environment;
             _config = config;
             _logger = logger;
@@ -34,14 +30,69 @@ namespace FastFood.Service
             _httpContextAccessor = httpContextAccessor;
             _AESService = AESService;
         }
+
+        public async Task<Header?> GetHeader()
+        {
+            try
+            {
+                
+                    Header? header = new Header();
+                    int CustId = await GetCustIdFromHttpContext();
+                    if (CustId > 0)
+                    {
+                        header.CartList = await _context.Carts
+                .Where(ct => ct.CustId == CustId)
+                .Join(_context.FoodItems,
+                      ct => ct.FoodId,
+                      fit => fit.FoodId,
+                      (ct, fit) => new CartList
+                      {
+                          FoodId = ct.FoodId,
+                          FoodName = fit.FoodName,
+                          Price = ct.Price,
+                          Quantity = ct.Quantity
+                      })
+                .OrderBy(cl => cl.FoodName)
+                .ToListAsync();
+                    header.CustProfileName = await _context.Customers
+                 .Where(c => c.CustId == CustId)
+                 .Select(c => new CustProfileName { CustId = c.CustId, CustName = c.CustName ?? "" })
+                 .FirstOrDefaultAsync();
+                }
+                    header.CategoryList = await _context.Categories
+                .OrderBy(c => c.CatName)
+                .Select(c => new CategoryList { CatId = c.CatId, CatName = c.CatName })
+                .ToListAsync();
+
+                return header;
+                
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, $"An error occurred while getting header");
+                return null;
+            }
+        }
         public async Task<IEnumerable<CartList>?> GetCartList(int CustId)
         {
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-                {
-                    return await db.QueryAsync<CartList>("getcart", new { CustId = CustId });
-                }
+                var cartList = await _context.Carts
+                .Where(ct => ct.CustId == CustId)
+                .Join(_context.FoodItems,
+                      ct => ct.FoodId,
+                      fit => fit.FoodId,
+                      (ct, fit) => new CartList
+                      {
+                          FoodId = ct.FoodId,
+                          FoodName = fit.FoodName,
+                          Price = ct.Price,
+                          Quantity = ct.Quantity
+                      })
+                .OrderBy(cl => cl.FoodName)
+                .ToListAsync();
+
+                return cartList;
             }
             catch (Exception ex)
             {
@@ -49,13 +100,20 @@ namespace FastFood.Service
                 return null;
             }
         }
-        public async Task<bool> RemoveCart(int CustId,int FoodID)
+        public async Task<bool> RemoveCart(int CustId,int FoodId)
         {
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                var cartItem = await _context.Carts.FirstOrDefaultAsync(ct => ct.CustId == CustId && ct.FoodId == FoodId);
+                if (cartItem != null)
                 {
-                    return await db.QueryFirstOrDefaultAsync<int>("removecart", new { CustId,FoodID })==1;
+                    _context.Carts.Remove(cartItem);
+                    await _context.SaveChangesAsync();
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
             catch (Exception ex)
@@ -66,11 +124,23 @@ namespace FastFood.Service
         }
         public async Task<IEnumerable<CartList>?> GetOrderList(int CustId)
         {
-            try { 
-            using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+            try
             {
-                return await db.QueryAsync<CartList>("getOrder", new { CustId = CustId });
-            }
+                var orderList = await (from ot in _context.Orders
+                                       join fit in _context.FoodItems on ot.FoodId equals fit.FoodId
+                                       join pt in _context.Payments on ot.OrderId equals pt.OrderId into ptGroup
+                                       from pt in ptGroup.DefaultIfEmpty()
+                                       where ot.CustId == CustId 
+                                       orderby fit.FoodName
+                                       select new CartList
+                                       {
+                                           FoodId = ot.FoodId,
+                                           FoodName = fit.FoodName,
+                                           Price = ot.Price,
+                                           Quantity = ot.Quantity
+                                       }).ToListAsync();
+
+                return orderList;
             }
             catch (Exception ex)
             {
@@ -78,31 +148,25 @@ namespace FastFood.Service
                 return null;
             }
         }
-        public async Task<CustProfileName?> GetCustomer(int CustId)
-        {
-            try
-            {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-                {
-                    return await db.QueryFirstOrDefaultAsync<CustProfileName>("GetCustProfileName", new { CustId = CustId },
-                        commandType: CommandType.StoredProcedure);
-                }
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, $"An error occurred while getting customer by ID: {CustId}");
-                return null;
-            }
-        }
+       
         public async Task<CustomerUpdate?> GetCustomer2(int CustId)
         {
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                var customerAccount = await _context.Customers
+                .Where(c => c.CustId == CustId)
+                .Select(c => new CustomerUpdate
                 {
-                    return await db.QueryFirstOrDefaultAsync<CustomerUpdate>("GetCustomerAccount2", new { CustId = CustId },
-                        commandType: CommandType.StoredProcedure);
-                }
+                    CustId = c.CustId,
+                    CustName = c.CustName,
+                    CustAddress = c.CustAddress,
+                    CustPhone = c.CustPhone,
+                    CustEmail = c.CustEmail,
+                    CustPassword = c.CustPassword
+                })
+                .FirstOrDefaultAsync();
+
+                return customerAccount;
             }
             catch (Exception ex)
             {
@@ -114,10 +178,11 @@ namespace FastFood.Service
         {
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-                {
-                    return await db.ExecuteScalarAsync<int>("DoesCustEmailExist", new { email = email });
-                }
+                var count = await _context.Customers
+                .Where(c => c.CustEmail == email)
+                .CountAsync();
+
+                return count;
             }
             catch (Exception ex)
             {
@@ -134,20 +199,37 @@ namespace FastFood.Service
             {
                 if (CustModel != null)
                 {
-                    using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-                    {
 
-                        var result = await db.QueryFirstOrDefaultAsync<SignUpResponse>("signup", new
+                    // Generate a random 10-digit number as activated pin
+                    Random random = new Random();
+                    var activatedPin = random.Next(10000, 99999).ToString() + random.Next(10000, 99999).ToString();
+
+                    // Start transaction
+                    using (var transaction = _context.Database.BeginTransaction())
+                    {
+                        try
                         {
-                            CustName = CustModel?.CustName?.Trim(),
-                            CustAddress = CustModel?.CustAddress?.Trim(),
-                            CustPhone = CustModel?.CustPhone?.Trim(),
-                            CustEmail = CustModel?.CustEmail?.Trim(),
-                            CustModel?.CustPassword
-                        });
-                        if (result != null)
-                        {
-                            if (result.CustId != null) CustId = int.Parse(result.CustId);
+                            // Insert customer data into Customer
+                            var newCustomer = new Customer
+                            {
+                                CustName = CustModel?.CustName?.Trim(),
+                                CustAddress = CustModel?.CustAddress?.Trim(),
+                                CustPhone = CustModel?.CustPhone?.Trim(),
+                                CustEmail = CustModel?.CustEmail?.Trim(),
+                                CustPassword = CustModel?.CustPassword,
+                                RegDate = DateTime.Now.ToString(),
+                                ActivatedPin = activatedPin
+                            };
+
+                            _context.Customers.Add(newCustomer);
+                            await _context.SaveChangesAsync();
+
+                            // Commit transaction
+                            await transaction.CommitAsync();
+
+                            // Retrieve the CustId after insertion
+                            CustId = newCustomer.CustId;
+
                             if (CustId > 0)
                             {
                                 if (CustModel?.ImageFile != null)
@@ -161,22 +243,33 @@ namespace FastFood.Service
 
                                 }
 
-                                if (result.ActivatedPin != null)
+
+                                var CustEmail = CustModel?.CustEmail;
+                                if (CustEmail != null)
                                 {
-                                    var CustEmail = CustModel?.CustEmail;
-                                    if (CustEmail != null)
-                                    {
-                                        await _emailService.SendMail("FastFood New Account", "Your Account has just been created.<br/>" +
-                                               "<a href='https://localhost:7210/Account/ConfirmCustEmail?CustId=" + $"{CustId}&&ActivatedPin={result.ActivatedPin}'> " +
-                                               "CLICK HERE TO CONFIRM YOUR ACCOUNT</a>", CustEmail);
-                                    }
-
+                                    await _emailService.SendMail("FastFood New Account", "Your Account has just been created.<br/>" +
+                                           "<a href='https://localhost:7210/Account/ConfirmCustEmail?CustId=" + $"{CustId}&&ActivatedPin={activatedPin}'> " +
+                                           "CLICK HERE TO CONFIRM YOUR ACCOUNT</a>", CustEmail);
                                 }
+
+
                             }
+
                         }
+                        catch (Exception ex)
+                        {
+                            // Rollback transaction if an error occurs
+                            await transaction.RollbackAsync();
 
+                            // Log error
+                            _logger.LogError(ex, "An error occurred during signup");
 
+                            
+                        }
                     }
+
+
+
                 }
             }
             catch (Exception ex)
@@ -192,11 +285,26 @@ namespace FastFood.Service
         {
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                // Check if there are matching records
+                var recordCount = await _context.Customers
+                    .Where(c => c.CustId == CustId && c.ActivatedPin == ActivatedPin)
+                    .CountAsync();
+
+                // If there are matching records, update the activated status
+                if (recordCount > 0)
                 {
-                    return await db.ExecuteScalarAsync<int>("ConfirmAccount",
-                        new { CustId = CustId, ActivatedPin = ActivatedPin });
+                    var customer = await _context.Customers
+                        .FirstOrDefaultAsync(c => c.CustId == CustId && c.ActivatedPin == ActivatedPin);
+
+                    if (customer != null)
+                    {
+                        customer.Activated = 1;
+                        await _context.SaveChangesAsync();
+                    }
+                    else recordCount = 0;
                 }
+
+                return recordCount;
             }
             catch (Exception ex)
             {
@@ -210,44 +318,41 @@ namespace FastFood.Service
             int response = -3;
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-                {
-                    var result = await db.QueryFirstOrDefaultAsync<LoginResponse>("CustomerLogin",
-                        new { CustEmail = LoginModel.Email?.Trim() });
-                    if (result != null)
-                    {
-                        if (result.activated == 1)
-                        {
-                            if (result.CustPassword != null)
-                            {
-                                if (result.CustPassword == LoginModel.Password)
-                                {
-                                    if (result.CustId != null)
-                                    {
-                                        response = int.Parse(result.CustId);
-                                    }
-                                }
-                                else response = 0;
-                            }
-                            else response = -1;
-                        }
-                        else
-                        {
-                            if (result.ActivatedPin != null)
-                            {
-                                response = -2;
-                                if ((LoginModel.Email != null) && (LoginModel.Password != null) &&
-                                    result.CustId != null)
-                                {
-                                    await _emailService.SendMail("FastFood Account Confirmation", "Please confirm your account using the link below.<br/>" +
-                                                  "<br/><br/> <a href='https://localhost:7210/Account/ConfirmCustEmail?CustId=" + $"{result.CustId}&&ActivatedPin={result.ActivatedPin}'> " +
-                                                  "CLICK HERE TO CONFIRM YOUR ACCOUNT</a>", LoginModel.Email);
-                                }
-                            }
-                        }
+                var customer = await _context.Customers
+                 .FirstOrDefaultAsync(c => c.CustEmail == LoginModel.Email);
 
+
+                if (customer != null)
+                {
+                    if (customer.Activated == 1)
+                    {
+                        if (customer.CustPassword != null)
+                        {
+                            if (customer.CustPassword == LoginModel.Password)
+                            {
+                                response = customer.CustId;
+                            }
+                            else response = 0;
+                        }                        
                     }
+                    else
+                    {
+                        if (customer.ActivatedPin != null)
+                        {
+                            response = -2;
+                            if ((LoginModel.Email != null) && (LoginModel.Password != null))
+                            {
+                                await _emailService.SendMail("FastFood Account Confirmation", "Please confirm your account using the link below.<br/>" +
+                                              "<br/><br/> <a href='https://localhost:7210/Account/ConfirmCustEmail?CustId=" 
+                                              + $"{customer.CustId}&&ActivatedPin={customer.ActivatedPin}'> " +
+                                              "CLICK HERE TO CONFIRM YOUR ACCOUNT</a>", LoginModel.Email);
+                            }
+                        }
+                    }
+
                 }
+                else response = -1;
+
             }
             catch (Exception ex)
             {
@@ -262,24 +367,23 @@ namespace FastFood.Service
             int response = -1;
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-                {
-                    string? password = await db.QueryFirstOrDefaultAsync<string>("getPassword",
-                          new { CustEmail = CustEmail?.Trim() });
+                var customer = await _context.Customers
+                 .FirstOrDefaultAsync(c => c.CustEmail.Trim() == CustEmail.Trim());
 
-                    response = 0;
-                    if (password != null)
+                if (customer != null)
+                {
+                    string email = CustEmail.Trim();
+                    if (customer.CustPassword != null)
                     {
-                        string? email = CustEmail?.Trim();
-                        if (email != null)
-                        {
-                            await _emailService.SendMail("FastFood Account Details", $"Email:{email}  Password: {password}"
-                                , email);
-                            response = 1;
-                        }
+                        await _emailService.SendMail("FastFood Account Details", $"Email: {email} Password: {customer.CustPassword}", email);
+
+                        response= 1; // Success
                     }
-                    
-                    
+                   
+                }
+                else
+                {
+                    response= 0; // Customer not found
                 }
             }
             catch (Exception ex)
@@ -312,22 +416,38 @@ namespace FastFood.Service
         {
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
-                {
-                    using (var multi = await db.QueryMultipleAsync(
-                        "GetCustomerAccount",
-                        new { CustId = CustId },
-                        commandType: CommandType.StoredProcedure))
+                // Retrieve customer information
+                var customer = await _context.Customers
+                    .Where(c => c.CustId == CustId)
+                    .Select(c => new CustomerDTO
                     {
-                        var customer = await multi.ReadFirstOrDefaultAsync<CustomerDTO>();
-                        if (customer != null)
-                        {
-                            customer.CustOrder = await multi.ReadAsync<Order>();
-                        }
-                        return customer;
-                    }
+                        CustId = c.CustId,
+                        CustName = c.CustName,
+                        CustAddress = c.CustAddress,
+                        CustPhone = c.CustPhone,
+                        CustEmail = c.CustEmail,
+                        CustPassword = c.CustPassword,
+                        Ewallet = c.EWallet
+                    })
+                    .FirstOrDefaultAsync();
 
+                if (customer != null)
+                {
+                    // Retrieve customer orders
+                    customer.CustOrder = await _context.Orders
+                        .Where(o => o.CustId == CustId)
+                        .Select(o => new CustOrder
+                        {
+                            OrderDate = o.OrderDate, 
+                            FoodID = o.FoodId,
+                            FoodName = o.FoodItem.FoodName, 
+                            FoodPrice = o.Price, 
+                            Quantity = o.Quantity
+                        })
+                        .ToListAsync();
                 }
+
+                return customer;
             }
             catch (Exception ex)
             {
@@ -374,18 +494,35 @@ namespace FastFood.Service
         {
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                var existingCustomer = await _context.Customers
+                    .FirstOrDefaultAsync(c => c.CustId == model.CustId);
+
+                if (existingCustomer != null)
                 {
-                    var response = await db.QuerySingleAsync<int>("UpdateProfile", new
+
+                    // Check if the new email already exists for another customer
+                    var emailExists = await _context.Customers
+                        .AnyAsync(c => c.CustEmail == model.CustEmail && c.CustId != model.CustId);
+
+                    if (emailExists)
                     {
-                        CustName = model?.CustName?.Trim(),
-                        CustAddress = model?.CustAddress?.Trim(),
-                        CustPhone = model?.CustPhone?.Trim(),
-                        CustEmail = model?.CustEmail?.Trim(),
-                        model?.CustPassword,
-                        model?.CustId
-                    });
-                    return response;
+                        // Email already exists for another customer
+                        return 0;
+                    }
+                    else
+                    {
+                        // Update customer data
+                        existingCustomer.CustName = model.CustName?.Trim();
+                        existingCustomer.CustAddress = model.CustAddress?.Trim();
+                        existingCustomer.CustPhone = model.CustPhone?.Trim();
+                        existingCustomer.CustEmail = model.CustEmail?.Trim();
+                        existingCustomer.CustPassword = model.CustPassword;
+
+                        await _context.SaveChangesAsync();
+
+                        // Return 1 to indicate successful update
+                        return 1;
+                    }
                 }
             }
             catch (Exception ex)
@@ -423,16 +560,19 @@ namespace FastFood.Service
             
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                var cartItem = new Cart
                 {
-                   return  await db.QueryFirstOrDefaultAsync<int>("AddToCart", new
-                    {
-                       CustId,
-                       model.FoodId,
-                       model.Quantity,
-                       model.Price
-                    }) == 1 ;
-                }
+                    CustId = CustId,
+                    FoodId = model.FoodId,
+                    Quantity = model.Quantity,
+                    Price = model.Price,
+                    CartDate = DateTime.Now.ToString()
+                };
+
+                _context.Carts.Add(cartItem);
+                await _context.SaveChangesAsync();
+
+                return true;
             }
             catch (Exception ex)
             {
@@ -446,20 +586,31 @@ namespace FastFood.Service
         {
             try
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                var customer = await _context.Customers
+                .Where(c => c.CustId == CustId)
+                .Select(c => new CustomerCart
                 {
-                    using (var multi = await db.QueryMultipleAsync("CheckOut",
-                        new { CustId = CustId }, commandType: CommandType.StoredProcedure))
-                    {
-                        var customer = await multi.ReadFirstOrDefaultAsync<CustomerCart>();
-                        if (customer != null)
+                    CustId = c.CustId,
+                    CustName = c.CustName,
+                    CustAddress = c.CustAddress,
+                    CustPhone = c.CustPhone,
+                    CustEmail = c.CustEmail,
+                    Ewallet = c.EWallet,
+                    CustCart = _context.Carts
+                        .Where(t => t.CustId == CustId)
+                        .Select(t => new CCart
                         {
-                            customer.CustCart = await multi.ReadAsync<Cart>();
-                        }
-                        return customer;
-                    }
+                            CartDate = t.CartDate.ToString(), 
+                            FoodID = t.FoodId,
+                            FoodName = t.FoodItem.FoodName, 
+                            FoodPrice = t.Price, 
+                            Quantity = t.Quantity
+                        })
+                        .ToList()
+                })
+                .FirstOrDefaultAsync();
 
-                }
+                return customer;
             }
             catch (Exception ex)
             {
@@ -470,23 +621,82 @@ namespace FastFood.Service
         }
         public async Task<int> PlaceOrder(int CustId)
         {
-            try
+
+            using (var transaction = _context.Database.BeginTransaction())
             {
-                using (IDbConnection db = new SqlConnection(_config.GetConnectionString("DefaultConnection")))
+                try
                 {
-                    var response = await db.QueryFirstOrDefaultAsync<int>("PlaceOrder", new
+                    var totalPrice = _context.Carts
+                        .Where(t => t.CustId == CustId)
+                        .Sum(t => t.Price * t.Quantity);
+
+                    if (totalPrice > 0)
                     {
-                      CustId
-                    });
-                    return response;
+                        var ewallet = _context.Customers
+                            .Where(c => c.CustId == CustId)
+                            .Select(c => c.EWallet)
+                            .FirstOrDefault();
+
+                        if (ewallet >= totalPrice)
+                        {
+                            var orderItems = _context.Carts
+                                .Where(t => t.CustId == CustId)
+                                .Select(t => new Order
+                                {
+                                    CustId = t.CustId,
+                                    FoodId = t.FoodId,
+                                    Quantity = t.Quantity,
+                                    Price = t.Price,
+                                    OrderDate = DateTime.Now.ToString()
+                                })
+                                .ToList();
+
+                            _context.Orders.AddRange(orderItems);
+                            await _context.SaveChangesAsync();
+
+                            var orderId = orderItems.FirstOrDefault()?.OrderId;
+
+                            _context.Carts.RemoveRange(_context.Carts.Where(t => t.CustId == CustId));
+                            await _context.SaveChangesAsync();
+
+                            var payment = new Payment
+                            {
+                                OrderId = orderId ?? 0,
+                                TotalPrice = totalPrice,
+                                PDate = DateTime.Now.ToString()
+                            };
+
+                            _context.Payments.Add(payment);
+                            await _context.SaveChangesAsync();
+
+                            var customer = await _context.Customers.FirstOrDefaultAsync(c => c.CustId == CustId);
+                            if (customer != null)
+                            {
+                                customer.EWallet -= totalPrice;
+                                await _context.SaveChangesAsync();
+                            }
+
+                            transaction.Commit();
+
+                            return 1; // Success
+                        }
+                        else
+                        {
+
+                            return 0; // Insufficient balance
+                        }
+                    }
+                    else return -2;
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex, $"An error occurred while Placing Order with ID: {CustId}");
+                    transaction.Rollback();
+                    throw;
                 }
             }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, $"An error occurred while Placing Order with ID: {CustId}");
-
-            }
-            return -1;
+            
+            
         }
     }
 }

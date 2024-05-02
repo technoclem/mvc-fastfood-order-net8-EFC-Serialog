@@ -1,4 +1,4 @@
-﻿using FastFood.Dto;
+﻿using FastFoodEFC.Dto;
 
 namespace FastFood.Service.Interface
 {

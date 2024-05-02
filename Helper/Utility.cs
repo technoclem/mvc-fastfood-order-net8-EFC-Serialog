@@ -1,6 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 
-namespace FastFood.Helper
+namespace FastFoodEFC.Helper
 {
     public static class Utility
     {

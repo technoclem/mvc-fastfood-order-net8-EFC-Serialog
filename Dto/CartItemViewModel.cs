@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace FastFood.Dto
+namespace FastFoodEFC.Dto
 {
     public class CartItemViewModel
     {

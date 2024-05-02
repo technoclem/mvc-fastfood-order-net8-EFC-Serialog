@@ -1,4 +1,4 @@
-namespace FastFood.Models
+namespace FastFoodEFC.Models
 {
     public class ErrorViewModel
     {

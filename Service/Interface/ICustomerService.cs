@@ -1,15 +1,16 @@
-﻿using FastFood.Dto;
-using FastFood.Models;
+﻿using FastFoodEFC.Dto;
+using System.Reflection.PortableExecutable;
 
 namespace FastFood.Service.Interface
 {
     public interface ICustomerService
     {
+        Task<Header?> GetHeader();
         Task<IEnumerable<CartList>?> GetCartList(int CustID);
         Task<bool> RemoveCart(int CustID,int FoodID);
         Task<IEnumerable<CartList>?> GetOrderList(int CustID);
         Task<bool> AddToCart(int CustID,CartItemViewModel model);
-        Task<CustProfileName?> GetCustomer(int CustID);
+       
         Task<CustomerUpdate?> GetCustomer2(int CustID);
         Task<int> UpdateProfile(CustomerUpdate CustModel);
         Task<bool> UpdateProfileImage(IFormFile ImageFile, int CustID);

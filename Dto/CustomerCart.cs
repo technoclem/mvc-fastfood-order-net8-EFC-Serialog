@@ -1,4 +1,4 @@
-﻿namespace FastFood.Dto
+﻿namespace FastFoodEFC.Dto
 {
     public class CustomerCart
     {
@@ -12,19 +12,19 @@
 
         public string? CustEmail { get; set; }
                
-        public float Ewallet { get; set; }
+        public double Ewallet { get; set; }
 
-        public IEnumerable<Cart>? CustCart { get; set; }
+        public IEnumerable<CCart>? CustCart { get; set; }
 
     }
 
-    public class Cart
+    public class CCart
     {
         public int FoodID { get; set; }
 
         public string? FoodName { get; set; }
 
-        public float FoodPrice { get; set; }
+        public double FoodPrice { get; set; }
 
         public int Quantity { get; set; }
 
